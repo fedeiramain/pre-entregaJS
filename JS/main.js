@@ -28,11 +28,11 @@ if (ingresos > 0 && ingresos <= 100) {
     while (cuotas != 3 && cuotas != 6 && cuotas != 12) {
         cuotas = prompt("ingrese cantidad de cuotas (3, 6 y 12):")
     }
-    if (cuota = 3) {
+    if (cuotas == 3) {
         alert("Pagas 3 cuotas de 180 mil pesos")
-    } else if (cuota = 6) {
+    } else if (cuotas == 6) {
         alert("Pagas 6 cuotas de 100 mil pesos")
-    } else if (cuota = 12) {
+    } else if (cuotas == 12) {
         alert("Pagas 12 cuotas de 65 mil pesos")
     }
 } else if (ingresos > 200 && ingresos <= 300) {
@@ -41,11 +41,11 @@ if (ingresos > 0 && ingresos <= 100) {
     while (cuotas != 3 && cuotas != 6 && cuotas != 12) {
         cuotas = prompt("ingrese cantidad de cuotas (3, 6 y 12):")
     }
-    if (cuota = 3) {
+    if (cuotas == 3) {
         alert("Pagas 3 cuotas de 320 mil pesos")
-    } else if (cuota = 6) {
+    } else if (cuotas == 6) {
         alert("Pagas 6 cuotas de 200 mil pesos")
-    } else if (cuota = 12) {
+    } else if (cuotas == 12) {
         alert("Pagas 12 cuotas de 130 mil pesos")
     }
 } else if (ingresos > 300) {
