@@ -1,18 +1,20 @@
 alert("Bienvenidos a Prestamos!!");
 
-function inicieSesion () {
+function ingreseUsuario() {
     let usuario = prompt("Por favor, ingrese su usuario:");
-while (usuario == "") {
-    usuario = prompt("Por favor, ingrese su usuario:");
+    while (usuario == "") {
+        usuario = prompt("Por favor, ingrese su usuario:");
+    };
+    
+    let contraseña = prompt("ingrese su clave:");
+    let autoriza = 1234;
+
+    while (contraseña != autoriza) {
+         contraseña = prompt("incorrecto, ingrese su clave:");
+    };
 };
 
-let contraseña = prompt("ingrese su clave:");
-let autoriza = 1234;
-
-while (contraseña != autoriza) {
-    contraseña = prompt("incorrecto, ingrese su clave:");
-};
-};
+ingreseUsuario();
 
 alert("Prestamos personales");
 
@@ -22,6 +24,7 @@ while (ingresos <= 0) {
     ingresos = prompt("Indique sus ingresos en miles de pesos:");
 };
 
+function calculoCuota() {
     if (ingresos > 0 && ingresos <= 100) {
         alert("Usted no tiene prestamos disponibles.")
     } else if (ingresos > 100 && ingresos <= 200) {
@@ -52,7 +55,9 @@ while (ingresos <= 0) {
         }
     } else if (ingresos > 300) {
         alert ("Consulte con un ejecutivo, por mayor monto")
-    };
+   };
+}
 
+calculoCuota();
 
 alert("Muchas gracias por su visita!");
