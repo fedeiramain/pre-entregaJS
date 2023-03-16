@@ -4,12 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
     <title>Prestamos Personales</title>
 </head>
 <body>
-    <h1>Prestamos Personales</h1>
-     
- <script src="./JS/main.js"></script> 
- <script src="./JS/main2.js"></script>  
+    <header>
+        <h1 class="tituloPrincipal">Iphone Store</h1>
+    </header>
+    <main>
+        <section class="secIphone mt-4">
+            <div class="row">
+                <div class="card">
+                    <img src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Iphone 1</h5>
+                      <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Iphone 2</h5>
+                      <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Iphone 3</h5>
+                      <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                  </div>
+            </div>
+            
+        </section>
+        <section class="container ingresoUsuario mt-4">
+            <form class="usuario">
+                <h2>Login</h2>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Usuario</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+        </section>
+        <section class="prestamosPersonales container-fluid mt-4">
+          <form class="solicitudPrestamo">
+            <h3>Solicitud de Prestamo</h3>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Ingresos Mensuales</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Monto a solicitar</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>20000</option>
+                <option>50000</option>
+                <option>80000</option>
+                <option>120000</option>
+                <option>150000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Valor de cuotas</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <a href="#" class="btn btn-primary">Solicitar</a>
+          </form>
+        </section>
+    </main>
+
+    <footer>
+      <h4>&copy;Todos los Derechos Reservados</h4>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+ <script src="./JS/main.js"></script>  
 </body>
 </html>
