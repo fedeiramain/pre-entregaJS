@@ -9,15 +9,15 @@
     align-items: center;
 };
 
-.row {
-    display: flex;
-    justify-content: space-around;
-};
 .card {
     width: 25%;
     margin-inline: 5px;
 
 };
+
+.card-img-top {
+    width: 100%;
+}
 
 .btn {
     font-size: 25px;

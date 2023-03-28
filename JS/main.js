@@ -52,13 +52,13 @@ const preciosFinanciados = listaContado.map((producto) => {
 
 // console.log(preciosFinanciados);
 
-alert("Bienvenidos a Iphone Store");
+// alert("Bienvenidos a Iphone Store");
 
-const tipoDeCompra = prompt("Indique como comprar: \n Contado \n Financiado");
+// const tipoDeCompra = prompt("Indique como comprar: \n Contado \n Financiado");
 
-while (tipoDeCompra != "contado" && tipoDeCompra != "financiado") {
-    tipoDeCompra = prompt("Indique como comprar: \n Contado \n Financiado");
-};
+// while (tipoDeCompra != "contado" && tipoDeCompra != "financiado") {
+//     tipoDeCompra = prompt("Indique como comprar: \n Contado \n Financiado");
+// };
 
 function selcLista() {
     if(tipoDeCompra === "contado") {
@@ -71,7 +71,7 @@ function selcLista() {
 selcLista();
 
 
-alert("Bienvenidos a Seccion Prestamos!!");
+// alert("Bienvenidos a Seccion Prestamos!!");
 
 function ingreseUsuario() {
     let usuario = prompt("Por favor, ingrese su usuario:");
@@ -89,7 +89,7 @@ function ingreseUsuario() {
 
 ingreseUsuario();
 
-alert("Prestamos personales");
+// alert("Prestamos personales");
 
 let ingresos = prompt("Indique sus ingresos en miles de pesos:");
 
@@ -133,5 +133,5 @@ function calculoCuota() {
 
 calculoCuota();
 
-alert("Muchas gracias por su visita!");
+// alert("Muchas gracias por su visita!");
 
