@@ -12,7 +12,8 @@ body {
 
 header {
     width: 100%;
-    color: red;
+    height: 10vh;
+    color: blue;
 }
 
 .navbar {
@@ -38,7 +39,7 @@ header {
 
 .menu-item.active a{
     background-color: white;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 2rem 0rem 2rem;
     border-radius: 1rem;
     color: black;
    
@@ -49,10 +50,11 @@ header {
 /* main */
 
 main {
+    height: 80vh;
+    overflow-y: scroll;
     background-color: white;
     margin: 2rem;
     border-radius: 1rem;
-    overflow: hidden;
 }
 
 .productos {
@@ -64,6 +66,7 @@ main {
 
 .producto {
    border: 1px solid blue;
+   position: relative;
    border-radius: 1rem;
    overflow: hidden;
 }
@@ -101,6 +104,7 @@ main {
 
 .productos-carrito {
     width: 100%;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -109,6 +113,7 @@ main {
     max-width: 100%;
     margin: 1rem;
     padding: 1rem;
+    background-color: rgb(188, 186, 186);
     display: flex;
     justify-content: space-between;
     border: 1px solid gray;
@@ -117,16 +122,25 @@ main {
 
 .img-producto-carrito {
     max-width: 10%;
+    border-radius: 1rem;
+}
+
+.titulo-producto-carrito, 
+.cantidad-producto-carrito,
+.precio-producto-carrito,
+.subtotal-producto-carrito {
+    color: blue;
 }
 
 /* footer */
 footer {
     width: 100%;
-    height: 10vh;
+    height: 4vh;
     background-color: black;
     color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    
 };
