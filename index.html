@@ -11,84 +11,43 @@
 <body>
     <header>
         <h1 class="tituloPrincipal">Iphone Store</h1>
+        <nav class="navbar">
+          <ul class="menu">
+            <li class="menu-item"><button class="btn-productos">Iphone</button></li>
+            <li class="menu-item"><button class="btn-productos">Ipad</button></li>
+            <li class="menu-item"><button class="btn-productos">Accesorios</button></li>
+          </ul>
+        </nav>
     </header>
     <main>
-        <section class="container-fluid">
-            <div class="row">
-                <div class="card col-md-4">
-                    <img src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Iphone 1</h5>
-                      <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                  </div>
-                <div class="card col-md-4">
-                    <img src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Iphone 2</h5>
-                      <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <img src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Iphone 3</h5>
-                      <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-        <section class="container ingresoUsuario mt-4">
-            <form class="usuario">
-                <h2>Login</h2>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Usuario</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+      <div class="productos">
+        <div class="producto">
+          <img class="img-producto" src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" alt="">
+          <div class="detalle-producto">
+            <h3 class="titulo-producto">Iphone 12</h3>
+            <p>$ 200.000</p>
+            <button class="agregar-carrito">Agregar</button>
+          </div>
+        </div>
+        <div class="producto">
+          <img class="img-producto" src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" alt="">
+          <div class="detalle-producto">
+            <h3 class="titulo-producto">Iphone 13</h3>
+            <p>$ 280.000</p>
+            <button class="agregar-carrito">Agregar</button>
+          </div>
+        </div>
+        <div class="producto">
+          <img class="img-producto" src="./img/iphone-14-pro-model-unselect-gallery-2-202209_GEO_EMEA.jpg" alt="">
+          <div class="detalle-producto">
+            <h3 class="titulo-producto">Iphone 14</h3>
+            <p>$ 320.000</p>
+            <button class="agregar-carrito">Agregar</button>
+          </div>
+        </div>
+      </div>
 
-        </section>
-        <section class="prestamosPersonales container-fluid mt-4">
-          <form class="solicitudPrestamo">
-            <h3>Solicitud de Prestamo</h3>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Ingresos Mensuales</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Monto a solicitar</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>20000</option>
-                <option>50000</option>
-                <option>80000</option>
-                <option>120000</option>
-                <option>150000</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect2">Valor de cuotas</label>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <a href="#" class="btn btn-primary">Solicitar</a>
-          </form>
-        </section>
+
     </main>
 
     <footer>
