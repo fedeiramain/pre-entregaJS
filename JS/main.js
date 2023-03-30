@@ -59,6 +59,7 @@ const contenedorProductos = document.querySelector("#productos");
 
 
 function cargaProductos() {
+    
     productos.forEach(producto => {
         let div = document.createElement("div");
         div.classList.add("producto");
@@ -70,7 +71,7 @@ function cargaProductos() {
                          </div>`
         contenedorProductos.append(div);
     });
-    cargarCarrito();
+    cargarCarrito;
 };
 
 cargaProductos();
@@ -83,13 +84,13 @@ function cargarCarrito() {
     })
 }
 
+
 let carrito;
-const pedidosLocal = JSON.parse(localStorage.getItem("carrito-actualizado"));
-if(pedidosLocal) {
-    carrito = pedidosLocal
-}else {
-    carrito = [];
-}
+let preCarrito = JSON.parse(localStorage.getItem("enCarrito"));
+// console.log(preCarrito);
+
+
+
 
 
 function agregarCarrito(e) {

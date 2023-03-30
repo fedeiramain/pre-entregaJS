@@ -1,4 +1,5 @@
-const pedidos = JSON.parse(localStorage.getItem("enCarrito"));
+let pedidos = localStorage.getItem("enCarrito");
+pedidos = JSON.parse(pedidos);
 const ventas = document.querySelector("#productos-carrito");
 const carritoVacio = document.querySelector(".carrito-vacio");
 const suCompra = document.querySelector(".su-compra");
@@ -51,7 +52,7 @@ function eliminarproducto() {
         boton.addEventListener("click", quitarDeCarrito)
      })
 
-     quitarDeCarrito(e);
+     quitarDeCarrito;
 }
 
 function quitarDeCarrito(e) {
@@ -59,6 +60,7 @@ function quitarDeCarrito(e) {
     const index = pedidos.findIndex(producto => producto.id === idBoton);
     pedidos.splice(index, 1);
     listaCompra();
+    console.log(pedidos);
 
-    localStorage.setItem("carrito-actualizado", JSON.stringify(pedidos));
+    localStorage.setItem("enCarrito", JSON.stringify(pedidos));
 }
