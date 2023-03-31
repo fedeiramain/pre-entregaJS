@@ -1,9 +1,9 @@
-let pedidos = localStorage.getItem("enCarrito");
-pedidos = JSON.parse(pedidos);
+let pedidos = JSON.parse(localStorage.getItem("enCarrito"));
 const ventas = document.querySelector("#productos-carrito");
 const carritoVacio = document.querySelector(".carrito-vacio");
 const suCompra = document.querySelector(".su-compra");
 const carritoAcc = document.querySelector(".agregar-vaciar");
+const btnpagar = document.querySelector(".btn-carrito");
 
 
 function listaCompra() {
@@ -60,7 +60,8 @@ function quitarDeCarrito(e) {
     const index = pedidos.findIndex(producto => producto.id === idBoton);
     pedidos.splice(index, 1);
     listaCompra();
-    console.log(pedidos);
 
     localStorage.setItem("enCarrito", JSON.stringify(pedidos));
 }
+
+

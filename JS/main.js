@@ -39,7 +39,7 @@ const productos = [
     id: "airpods",
     categoria: "accesorios",
     precio: 45000,
-    img:"./img/airpod.jfif"
+    img:"./img/airpods.jpg"
 },
 {   nombre: "Earpods",
     id: "earpods",
@@ -71,7 +71,7 @@ function cargaProductos() {
                          </div>`
         contenedorProductos.append(div);
     });
-    cargarCarrito;
+    cargarCarrito();
 };
 
 cargaProductos();
@@ -82,21 +82,18 @@ function cargarCarrito() {
     botonAgregar.forEach(producto => {
     producto.addEventListener("click", agregarCarrito);
     })
-}
-
+};
 
 let carrito;
-let preCarrito = JSON.parse(localStorage.getItem("enCarrito"));
-// console.log(preCarrito);
-
-
-
-
-
+let carritoAct = localStorage.getItem("enCarrito");
+if(carritoAct) {
+    carrito = JSON.parse(carritoAct);
+}else {
+    carrito = [];
+}
 function agregarCarrito(e) {
     const idbtn = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idbtn);
-
     if(carrito.some(producto => producto.id === idbtn)) {
         const index = carrito.findIndex(producto => producto.id === idbtn);
         carrito[index].cantidad +=1;
@@ -106,7 +103,8 @@ function agregarCarrito(e) {
         carrito.push(productoAgregado);
 
         }
+    
         localStorage.setItem("enCarrito", JSON.stringify(carrito));
-    }
+    };
    
 
