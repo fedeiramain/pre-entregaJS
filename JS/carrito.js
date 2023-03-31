@@ -65,3 +65,8 @@ function quitarDeCarrito(e) {
 }
 
 
+btnpagar.addEventListener("click", pagarCompras);
+
+function pagarCompras() {
+    alert("Muchas Gracias por Su Compra");
+}

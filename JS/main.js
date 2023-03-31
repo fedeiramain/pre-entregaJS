@@ -38,8 +38,8 @@ const productos = [
 {   nombre: "Airpods",
     id: "airpods",
     categoria: "accesorios",
-    precio: 45000,
-    img:"./img/airpods.jpg"
+    precio: 10000,
+    img:"./img/erapods.jpg"
 },
 {   nombre: "Earpods",
     id: "earpods",
