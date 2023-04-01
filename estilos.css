@@ -120,6 +120,12 @@ main {
     flex-direction: column;
 }
 
+.carrito-vacio {
+    color: red;
+    font-size: 40px;
+    padding-left: 2rem;
+}
+
 .producto-carrito {
     max-width: 100%;
     margin: 1rem;
@@ -127,6 +133,7 @@ main {
     background-color: rgb(188, 186, 186);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid gray;
     border-radius: 1rem;
 }
@@ -136,11 +143,14 @@ main {
     border-radius: 1rem;
 }
 
-.titulo-producto-carrito, 
-.cantidad-producto-carrito,
-.precio-producto-carrito,
-.subtotal-producto-carrito {
+small {
     color: blue;
+    text-decoration: underline;
+}
+
+.producto-info {
+    color: white;
+    font-size: 28px;
 }
 
 .btn-eliminar {
@@ -157,7 +167,7 @@ main {
     color: red;
 }
 
-.vaciar-pagar {
+.accion {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
@@ -167,14 +177,37 @@ main {
     font-size: 30px;
     padding: 5px;
     border-radius: 5px;
-    background-color: blue;
+    background-color: green;
     color: white;
-    border: 2px solid blue;
+    border: 2px solid green;
 }
 
 .btn-carrito:hover {
     background-color: white;
-    color: blue;
+    color: green;
+}
+
+.totales {
+    display: flex;
+}
+
+.titulo-total {
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.suma-total {
+    background-color: gray;
+    color: white;
+    font-size: 30px;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
 }
 
 .disabled {

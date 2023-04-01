@@ -2,14 +2,14 @@ let pedidos = JSON.parse(localStorage.getItem("enCarrito"));
 const ventas = document.querySelector("#productos-carrito");
 const carritoVacio = document.querySelector(".carrito-vacio");
 const suCompra = document.querySelector(".su-compra");
-const carritoAcc = document.querySelector(".agregar-vaciar");
 const btnpagar = document.querySelector(".btn-carrito");
+const totalPagar = document.querySelector(".suma-total");
+const totales = document.querySelector(".totales");
 
 
 function listaCompra() {
-    ventas.innerHTML = "";
-    if(pedidos) {
-        carritoVacio.classList.add("disabled");
+        ventas.innerHTML = "";
+        
         pedidos.forEach(pedido => {
             const unidad = document.createElement("div");
             unidad.classList.add("producto-carrito");
@@ -17,30 +17,26 @@ function listaCompra() {
             <img class="img-producto-carrito" src=${pedido.img} alt=${pedido.nombre}>
               <div class="titulo-producto-carrito">
                   <small>Titulo</small>
-                  <p>${pedido.nombre}</p>
+                  <p class="producto-info">${pedido.nombre}</p>
               </div>
               <div class="cantidad-producto-carrito">
                   <small>Cantidad</small>
-                  <p class="producto-cantidad">${pedido.cantidad}</p>
+                  <p class="producto-info">${pedido.cantidad}</p>
               </div>
               <div class="precio-producto-carrito">
                   <small>Precio</small>
-                  <p>$${pedido.precio}</p>
+                  <p class="producto-info">$${pedido.precio}</p>
               </div>
               <div class="subtotal-producto-carrito">
                   <small>Total</small>
-                  <p class="producto-total">$${pedido.precio * pedido.cantidad}</p>
+                  <p class="producto-info">$${pedido.precio * pedido.cantidad}</p>
               </div>
               <button class="btn-eliminar" id=${pedido.id}><i class="fa-solid fa-trash-can"></i></button>
             `
     
             ventas.append(unidad);
         });
-    }else {
-        carritoVacio.classList.remove("disabled");
-        suCompra.classList.add("disabled");
-        carritoAcc.classList.add("disabled");
-    }
+   
     eliminarproducto();
 }
 
@@ -70,3 +66,28 @@ btnpagar.addEventListener("click", pagarCompras);
 function pagarCompras() {
     alert("Muchas Gracias por Su Compra");
 }
+
+function tituloCarrito() {
+    if(pedidos != "") {
+        carritoVacio.classList.add("disabled");
+        suCompra.classList.remove("disabled");
+        btnpagar.classList.remove("disabled");
+        totales.classList.remove("disabled");
+    }else {
+        carritoVacio.classList.remove("disabled");
+        suCompra.classList.add("disabled");
+        btnpagar.classList.add("disabled");
+        totales.classList.add("disabled");
+        
+    }
+};
+
+tituloCarrito();
+
+function pagar() {
+    const total = pedidos.reduce((acc, producto) => acc +
+    (producto.precio * producto.cantidad), 0);
+    totalPagar.innerText = `${total}`;
+}
+
+pagar();
