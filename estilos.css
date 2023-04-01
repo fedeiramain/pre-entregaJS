@@ -230,3 +230,12 @@ footer {
     margin-top: 10px;
     
 };
+
+/* Media Queries */
+
+@media screen and (max-width: 921px) {
+    .productos {
+        display: flex;
+        flex-direction: column;
+    }
+}
