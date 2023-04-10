@@ -1,59 +1,11 @@
-const productos = [
- {  nombre: "Iphone 12",
-    id: "iphone-12",
-    categoria: "iphone",
-    precio: 200000,
-    img:"./img/iphone.jpg",
-},
-{   nombre: "Iphone 13",
-    id: "iphone-13",
-    categoria: "iphone",
-    precio: 280000,
-    img:"./img/iphone.jpg"
-},
-{   nombre: "Iphone 14",
-    id: "iphone-14",
-    categoria: "iphone",
-    precio: 320000,
-    img:"./img/iphone.jpg"
-},
-{   nombre: "Ipad Air",
-    id: "ipadair",
-    categoria: "ipad",
-    precio: 240000,
-    img:"./img/ipad.jpg"
-},
-{   nombre: "Ipad 10gen",
-    id: "ipad10gren",
-    categoria: "ipad",
-    precio: 220000,
-    img:"./img/ipad.jpg"
-},
-{  nombre: "Ipad Pro",
-   id: "ipadpro",
-   categoria: "ipad",
-   precio: 280000,
-   img:"./img/ipad.jpg"
-},
-{   nombre: "Airpods",
-    id: "airpods",
-    categoria: "accesorios",
-    precio: 10000,
-    img:"./img/erapods.jpg"
-},
-{   nombre: "Earpods",
-    id: "earpods",
-    categoria: "accesorios",
-    precio: 8000,
-    img:"./img/erapods.jpg"
-},
-{   nombre: "Cargador",
-    id: "cargador",
-    categoria: "accesorios",
-    precio: 6000,
-    img:"./img/cargador.jpg"
-},
-];
+let productos = [];
+
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargaProductos(productos)
+    })
 
 const contenedorProductos = document.querySelector("#productos");
 
@@ -73,8 +25,6 @@ function cargaProductos() {
     });
     cargarCarrito();
 };
-
-cargaProductos();
 
 function cargarCarrito() {
     botonAgregar = document.querySelectorAll(".agregar-carrito");
@@ -108,3 +58,12 @@ function agregarCarrito(e) {
     };
    
 
+// MENU MOBILE
+
+const menuBurger = document.querySelector(".open-menu");
+const navMobile = document.querySelector(".navbar-mobile");
+const closeMenu = document.querySelector(".close-menu");
+
+menuBurger.addEventListener("click", () => navMobile.classList.remove("disabled"));
+
+closeMenu.addEventListener("click", () => navMobile.classList.add("disabled"));
