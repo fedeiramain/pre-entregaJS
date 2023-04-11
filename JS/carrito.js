@@ -2,9 +2,11 @@ let pedidos = JSON.parse(localStorage.getItem("enCarrito"));
 const ventas = document.querySelector("#productos-carrito");
 const carritoVacio = document.querySelector(".carrito-vacio");
 const suCompra = document.querySelector(".su-compra");
-const btnpagar = document.querySelector(".btn-carrito");
+const btnpagar = document.querySelector(".btn-secondary");
+const tituloTotal = document.querySelector(".titulo-total");
 const totalPagar = document.querySelector(".suma-total");
-const totales = document.querySelector(".totales");
+const finalizar = document.querySelector(".btn-primary");
+const titutloFin = document.querySelector(".fin-compra");
 
 
 function listaCompra() {
@@ -58,36 +60,47 @@ function quitarDeCarrito(e) {
     listaCompra();
 
     localStorage.setItem("enCarrito", JSON.stringify(pedidos));
+    
 }
 
-
-btnpagar.addEventListener("click", pagarCompras);
-
-function pagarCompras() {
-    alert("Muchas Gracias por Su Compra");
-}
 
 function tituloCarrito() {
     if(pedidos != "") {
         carritoVacio.classList.add("disabled");
         suCompra.classList.remove("disabled");
         btnpagar.classList.remove("disabled");
-        totales.classList.remove("disabled");
-    }else {
+        totalPagar.classList.remove("disabled");
+    } else {
         carritoVacio.classList.remove("disabled");
         suCompra.classList.add("disabled");
         btnpagar.classList.add("disabled");
-        totales.classList.add("disabled");
+        totalPagar.classList.add("disabled");
         
     }
 };
 
 tituloCarrito();
 
-function pagar() {
+function total() {
     const total = pedidos.reduce((acc, producto) => acc +
     (producto.precio * producto.cantidad), 0);
-    totalPagar.innerText = `${total}`;
+    totalPagar.innerText = "Total: $" + `${total}`;
 }
 
-pagar();
+total();
+
+finalizar.addEventListener("click", cierre);
+
+function cierre() {
+        ventas.innerHTML = "";
+        pedidos.length = 0;
+        localStorage.setItem("enCarrito", JSON.stringify(pedidos));
+
+        carritoVacio.classList.add("disabled");
+        suCompra.classList.add("disabled");
+        btnpagar.classList.add("disabled");
+        totalPagar.classList.add("disabled");
+        titutloFin.classList.remove("disabled");
+   
+}
+console.log(pedidos);

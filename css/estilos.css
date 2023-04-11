@@ -62,7 +62,7 @@ header {
 }
 
 main {
-  height: 75vh;
+  height: 74vh;
   overflow-y: scroll;
   background-color: white;
   padding-bottom: 1rem;
@@ -122,6 +122,7 @@ main {
 }
 
 .su-compra {
+  color: green;
   font-size: 40px;
   padding-left: 2rem;
 }
@@ -173,56 +174,102 @@ small {
   padding: 2rem;
 }
 
-.btn-carrito {
-  font-size: 30px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: green;
-  color: white;
-  border: 2px solid green;
-}
-
-.btn-carrito:hover {
-  background-color: white;
-  color: green;
-}
-
-.totales {
-  display: flex;
-}
-
-.titulo-total {
-  background-color: green;
-  color: white;
+.btn-secondary {
+  background-color: green !important;
   font-size: 30px;
   padding: 1rem;
-  border-bottom-left-radius: 1rem;
-  border-top-left-radius: 1rem;
+  border-radius: 10px;
 }
 
 .suma-total {
-  background-color: gray;
+  background-color: green;
   color: white;
   font-size: 30px;
   padding: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-radius: 10px;
+}
+
+.modal-content {
+  background-color: black;
+}
+
+.close {
+  color: white;
+}
+
+.close:hover {
+  color: white;
+}
+
+.modal-title {
+  color: white;
+  font-size: 20px;
+}
+
+.form-nombre {
+  color: white;
+  font-size: 20px;
+}
+
+.form-card {
+  color: white;
+  font-size: 20px;
+}
+
+.form-control {
+  color: black;
+}
+
+.btn-primary {
+  background-color: green !important;
+  border: 0;
+}
+
+.fin-compra {
+  color: green;
+  font-size: 40px;
+  padding-left: 1rem;
 }
 
 footer {
   width: 100%;
-  height: 5vh;
+  height: 6vh;
   background-color: black;
   color: blue;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+}
+
+.title-footer {
+  margin-top: -20px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redes .fa-brands {
+  margin-inline: 5px;
+}
+.redes .fa-instagram {
+  color: orangered;
+  font-size: 30px;
+}
+.redes .fa-facebook {
+  color: blue;
+  font-size: 30px;
+}
+.redes .fa-whatsapp {
+  color: green;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 800px) {
   body {
-    background-color: blue;
+    background-color: black;
     display: flex;
     flex-direction: column;
   }
@@ -259,7 +306,7 @@ footer {
     width: 100%;
     height: 15vh;
     padding: 1rem;
-    background-color: blue;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -269,6 +316,7 @@ footer {
   }
   .mobile .menu-mobile .close-menu {
     background-color: transparent;
+    color: white;
     border: 3px solid white;
     border-radius: 5px;
     padding: 5px;
@@ -282,5 +330,8 @@ footer {
   }
   footer {
     height: 9vh;
+  }
+  .precio-producto-carrito {
+    display: none;
   }
 }/*# sourceMappingURL=estilos.css.map */

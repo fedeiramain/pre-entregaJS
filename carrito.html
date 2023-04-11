@@ -41,22 +41,60 @@
 
       <h2 class="carrito-vacio">Su Carrito esta Vacio</h2>
       <h2 class="su-compra">Su Compra:</h2> 
+      <h2 class="fin-compra disabled">Muchas Gracias Por Su Compra</h2> 
       <div class="productos-carrito" id="productos-carrito">
         <!-- Productos en carrito JS-->
       </div>
-      <div class="accion">
-        <button class="btn-carrito">Pagar</button>
-        <div class="totales">
-          <p class="titulo-total">Total:</p>
-          <p class="suma-total">$ 0</p>
-        </div>
+      <div class="accion">  
+            <div class="totales">
+              <p class="suma-total">$ 0</p>
+            </div>
+              <div class="accion-pagar">
+                    <button type="button" class="btn btn-secondary p-4" data-toggle="modal" data-target="#exampleModal">
+                      Ir a Pagar
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ingrese Nombre y Forma de Pago</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label class="form-nombre" for="exampleFormControlInput1">Nombre y Apellido</label>
+                                <input type="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Mi nombre" required>
+                              </div>
+                              <div class="form-group">
+                                <label class="form-card" for="exampleFormControlSelect1">Card select</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>Debito</option>
+                                  <option>Credito</option>
+                                </select>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Pagar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
       </div>
-
-
+      
     </main>
 
     <footer>
-      <h4>&copy;Todos los Derechos Reservados</h4>
+      <h4 class="title-footer">&copy;Todos los Derechos Reservados</h4>
+      <div class="redes">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
     </footer>
 
 

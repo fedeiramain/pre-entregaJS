@@ -51,8 +51,22 @@ function agregarCarrito(e) {
     }else {
         productoAgregado.cantidad = 1;
         carrito.push(productoAgregado);
-
         }
+        Toastify({
+            text: "Producto Agregado",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right", 
+            stopOnFocus: true, 
+            style: {
+              background: "green",
+              fontSize: "20px",
+              padding: "1rem",
+              borderRadius: "1rem",
+            },
+            onClick: function(){} 
+          }).showToast();
     
         localStorage.setItem("enCarrito", JSON.stringify(carrito));
     };

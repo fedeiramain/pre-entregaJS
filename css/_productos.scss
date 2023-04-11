@@ -1,5 +1,5 @@
 main {
-    height: 75vh;
+    height: 74vh;
     overflow-y: scroll;
     background-color: white;
     padding-bottom: 1rem;
@@ -64,6 +64,7 @@ main {
 }
 
 .su-compra {
+    color: green;
     font-size: 40px;
     padding-left: 2rem;
 }
@@ -115,39 +116,61 @@ small {
     padding: 2rem;
 }
 
-.btn-carrito {
-    font-size: 30px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
-    border: 2px solid green;
-}
-
-.btn-carrito:hover {
-    background-color: white;
-    color: green;
-}
-
-.totales {
-    display: flex;
-}
-
-.titulo-total {
-    background-color: green;
-    color: white;
+.btn-secondary {
+    background-color: green !important;
     font-size: 30px;
     padding: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem;
+    border-radius: 10px;
 }
 
 .suma-total {
-    background-color: gray;
+    background-color: green;
     color: white;
     font-size: 30px;
     padding: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 10px;
+}
 
+// Cuadro de pago
+
+.modal-content {
+    background-color: black;
+}
+
+.close {
+    color: white;
+}
+
+.close:hover {
+    color: white;
+}
+
+.modal-title {
+    color: white;
+    font-size: 20px;
+}
+
+.form-nombre {
+    color: white;
+    font-size: 20px;
+}
+
+.form-card {
+    color: white;
+    font-size: 20px;
+}
+
+.form-control {
+    color: black;
+}
+
+.btn-primary {
+    background-color: green !important;
+    border: 0;
+}
+
+.fin-compra {
+    color: green;
+    font-size: 40px;
+    padding-left: 1rem;
 }
