@@ -1,7 +1,7 @@
 
 let productos = [];
 
-fetch("../js/productos.json")
+fetch("./js/productos.JSON")
     .then(response => response.json())
     .then(data => {
         productos = data,

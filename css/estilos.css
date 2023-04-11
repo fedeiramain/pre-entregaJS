@@ -19,38 +19,32 @@ header {
   height: 14vh;
   color: blue;
 }
-
-.head-titulo {
+header .head-titulo {
   display: flex;
   justify-content: space-between;
 }
-
-.img-logo {
+header .head-titulo .img-logo {
   max-width: 5%;
   border-radius: 10px;
   margin-inline: 5px;
 }
-
-.navbar {
+header .navbar {
   width: 100%;
   display: flex;
 }
-
-.menu {
+header .navbar .menu {
   width: 100%;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-
-.menu-item a {
+header .navbar .menu .menu-item a {
   color: white;
   font-size: 40px;
   text-decoration: none;
 }
-
-.menu-item.active a {
+header .navbar .menu .menu-item.active a {
   background-color: white;
   padding: 0rem 2rem 0rem 2rem;
   border-radius: 1rem;
@@ -69,8 +63,7 @@ main {
   margin: 2rem;
   border-radius: 1rem;
 }
-
-.productos {
+main .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -82,24 +75,20 @@ main {
   border-radius: 1rem;
   overflow: hidden;
 }
-
-.img-producto {
+.producto .img-producto {
   max-width: 100%;
 }
-
-.detalle-producto {
+.producto .detalle-producto {
   background-color: rgb(100, 100, 207);
   border-radius: 1rem;
   margin-top: -1rem;
   position: relative;
   padding: 1rem;
 }
-
-.titulo-producto {
+.producto .detalle-producto .titulo-producto {
   color: white;
 }
-
-.agregar-carrito {
+.producto .detalle-producto .agregar-carrito {
   background-color: transparent;
   border: 2px solid white;
   padding: 0.5rem;
@@ -138,33 +127,27 @@ main {
   border: 1px solid gray;
   border-radius: 1rem;
 }
-
-.img-producto-carrito {
+.producto-carrito .img-producto-carrito {
   max-width: 10%;
   border-radius: 1rem;
 }
-
-small {
+.producto-carrito small {
   color: blue;
   text-decoration: underline;
 }
-
-.producto-info {
+.producto-carrito .producto-info {
   color: white;
   font-size: 28px;
 }
-
-.btn-eliminar {
+.producto-carrito .btn-eliminar {
   background-color: transparent;
   border: 0;
 }
-
-.fa-trash-can {
+.producto-carrito .btn-eliminar .fa-trash-can {
   font-size: 20px;
   color: black;
 }
-
-.fa-trash-can:hover {
+.producto-carrito .btn-eliminar .fa-trash-can:hover {
   color: red;
 }
 
@@ -173,17 +156,15 @@ small {
   justify-content: space-between;
   padding: 2rem;
 }
-
-.btn-secondary {
-  background-color: green !important;
+.accion .suma-total {
+  background-color: green;
+  color: white;
   font-size: 30px;
   padding: 1rem;
   border-radius: 10px;
 }
-
-.suma-total {
-  background-color: green;
-  color: white;
+.accion .btn-secondary {
+  background-color: green !important;
   font-size: 30px;
   padding: 1rem;
   border-radius: 10px;
@@ -192,40 +173,32 @@ small {
 .modal-content {
   background-color: black;
 }
-
-.close {
+.modal-content .close {
   color: white;
 }
-
-.close:hover {
+.modal-content .close:hover {
   color: white;
 }
-
-.modal-title {
+.modal-content .modal-title {
   color: white;
   font-size: 20px;
 }
-
-.form-nombre {
+.modal-content .form-nombre {
   color: white;
   font-size: 20px;
 }
-
-.form-card {
+.modal-content .form-card {
   color: white;
   font-size: 20px;
 }
-
-.form-control {
+.modal-content .form-control {
   color: black;
 }
-
-.btn-primary {
+.modal-content .btn-primary {
   background-color: green !important;
   border: 0;
 }
-
-.fin-compra {
+.modal-content .fin-compra {
   color: green;
   font-size: 40px;
   padding-left: 1rem;
@@ -241,28 +214,26 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-.title-footer {
+footer .title-footer {
   margin-top: -20px;
 }
-
-.redes {
+footer .redes {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.redes .fa-brands {
+footer .redes .fa-brands {
   margin-inline: 5px;
 }
-.redes .fa-instagram {
+footer .redes .fa-instagram {
   color: orangered;
   font-size: 30px;
 }
-.redes .fa-facebook {
+footer .redes .fa-facebook {
   color: blue;
   font-size: 30px;
 }
-.redes .fa-whatsapp {
+footer .redes .fa-whatsapp {
   color: green;
   font-size: 30px;
 }
@@ -273,36 +244,36 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .desk {
+  body .desk {
     display: none;
   }
-  .mobile {
+  body .mobile {
     display: flex;
     flex-direction: column;
     height: 5vh;
   }
-  .mobile .head-titulo-mobile {
+  body .mobile .head-titulo-mobile {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .mobile .head-titulo-mobile .tituloPrincipal-mobile {
+  body .mobile .head-titulo-mobile .tituloPrincipal-mobile {
     color: white;
   }
-  .mobile .head-titulo-mobile .open-menu {
+  body .mobile .head-titulo-mobile .open-menu {
     background-color: transparent;
     border: 0;
   }
-  .mobile .head-titulo-mobile .fa-bars {
+  body .mobile .head-titulo-mobile .fa-bars {
     color: white;
     padding: 1rem;
     font-size: 30px;
   }
-  .mobile .navbar-mobile {
+  body .mobile .navbar-mobile {
     width: 100%;
     position: relative;
   }
-  .mobile .menu-mobile {
+  body .mobile .menu-mobile {
     width: 100%;
     height: 15vh;
     padding: 1rem;
@@ -311,10 +282,10 @@ footer {
     flex-direction: column;
     justify-content: space-between;
   }
-  .mobile .menu-mobile .menu-item-mobile a {
+  body .mobile .menu-mobile .menu-item-mobile a {
     color: white;
   }
-  .mobile .menu-mobile .close-menu {
+  body .mobile .menu-mobile .close-menu {
     background-color: transparent;
     color: white;
     border: 3px solid white;
@@ -324,7 +295,7 @@ footer {
   main {
     height: 80vh;
   }
-  .productos {
+  main .productos {
     display: flex;
     flex-direction: column;
   }

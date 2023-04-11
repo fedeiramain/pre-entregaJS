@@ -5,46 +5,47 @@ main {
     padding-bottom: 1rem;
     margin: 2rem;
     border-radius: 1rem;
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 2rem;
+    }
 }
 
-.productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 2rem;
-}
+
 
 .producto {
    border: 1px solid blue;
    border-radius: 1rem;
    overflow: hidden;
-}
 
-.img-producto {
+   .img-producto {
     max-width: 100%;
-}
+    }
 
-.detalle-producto {
-    background-color: rgb(100, 100, 207);
-    border-radius: 1rem;
-    margin-top: -1rem;
-    position: relative;
-    padding: 1rem;
-}
+    .detalle-producto {
+        background-color: rgb(100, 100, 207);
+        border-radius: 1rem;
+        margin-top: -1rem;
+        position: relative;
+        padding: 1rem;
 
-.titulo-producto {
-    color: white;
-}
+        .titulo-producto {
+            color: white;
+        }
 
-.agregar-carrito {
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    color: white;
-    cursor: pointer;
+        .agregar-carrito {
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer;
+        }
+    }
 }
-
 
 
 // CARRITO
@@ -79,98 +80,103 @@ main {
     align-items: center;
     border: 1px solid gray;
     border-radius: 1rem;
-}
 
-.img-producto-carrito {
-    max-width: 10%;
-    border-radius: 1rem;
-}
+    .img-producto-carrito {
+        max-width: 10%;
+        border-radius: 1rem;
+    }
 
-small {
-    color: blue;
-    text-decoration: underline;
-}
-
-.producto-info {
-    color: white;
-    font-size: 28px;
-}
-
-.btn-eliminar {
-    background-color: transparent;
-    border: 0;
-}
-
-.fa-trash-can {
-    font-size: 20px;
-    color: black;
-}
-
-.fa-trash-can:hover {
-    color: red;
+    small {
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .producto-info {
+        color: white;
+        font-size: 28px;
+    }
+    
+    .btn-eliminar {
+        background-color: transparent;
+        border: 0;
+    
+        .fa-trash-can {
+            font-size: 20px;
+            color: black;
+        }
+        
+        .fa-trash-can:hover {
+            color: red;
+        }
+    }
 }
 
 .accion {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-}
 
-.btn-secondary {
-    background-color: green !important;
-    font-size: 30px;
-    padding: 1rem;
-    border-radius: 10px;
-}
+    .suma-total {
+        background-color: green;
+        color: white;
+        font-size: 30px;
+        padding: 1rem;
+        border-radius: 10px;
+    }
 
-.suma-total {
-    background-color: green;
-    color: white;
-    font-size: 30px;
-    padding: 1rem;
-    border-radius: 10px;
+    .btn-secondary {
+        background-color: green !important;
+        font-size: 30px;
+        padding: 1rem;
+        border-radius: 10px;
+    }
 }
 
 // Cuadro de pago
 
 .modal-content {
     background-color: black;
+
+    .close {
+        color: white;
+    }
+    
+    .close:hover {
+        color: white;
+    }
+
+    .modal-title {
+        color: white;
+        font-size: 20px;
+    }
+
+    .form-nombre {
+        color: white;
+        font-size: 20px;
+    }
+    
+    .form-card {
+        color: white;
+        font-size: 20px;
+    }
+    
+    .form-control {
+        color: black;
+    }
+    
+    .btn-primary {
+        background-color: green !important;
+        border: 0;
+    }
+    
+    .fin-compra {
+        color: green;
+        font-size: 40px;
+        padding-left: 1rem;
+    }
 }
 
-.close {
-    color: white;
-}
 
-.close:hover {
-    color: white;
-}
 
-.modal-title {
-    color: white;
-    font-size: 20px;
-}
 
-.form-nombre {
-    color: white;
-    font-size: 20px;
-}
 
-.form-card {
-    color: white;
-    font-size: 20px;
-}
-
-.form-control {
-    color: black;
-}
-
-.btn-primary {
-    background-color: green !important;
-    border: 0;
-}
-
-.fin-compra {
-    color: green;
-    font-size: 40px;
-    padding-left: 1rem;
-}

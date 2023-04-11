@@ -7,34 +7,37 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .title-footer {
+        margin-top: -20px;
+    }
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .fa-brands {
+            margin-inline: 5px;
+        }
+    
+        .fa-instagram {
+            color: orangered;
+            font-size: 30px;
+        }
+    
+        .fa-facebook {
+            color: blue;
+            font-size: 30px;
+        }
+    
+        .fa-whatsapp {
+            color: green;
+            font-size: 30px;
+        }
+    }
     
 };
 
-.title-footer {
-    margin-top: -20px;
-}
 
-.redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .fa-brands {
-        margin-inline: 5px;
-    }
-
-    .fa-instagram {
-        color: orangered;
-        font-size: 30px;
-    }
-
-    .fa-facebook {
-        color: blue;
-        font-size: 30px;
-    }
-
-    .fa-whatsapp {
-        color: green;
-        font-size: 30px;
-    }
-}
