@@ -4,8 +4,8 @@ fetch("./js/productos.json")
     .then(response => response.json())
     .then(data => {
         productos = data;
-        cargaProductos(productos)
-    })
+        cargaProductos(productos);
+    });
 
 const contenedorProductos = document.querySelector("#productos");
 
