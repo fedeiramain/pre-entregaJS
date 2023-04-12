@@ -1,12 +1,11 @@
 let pedidos = JSON.parse(localStorage.getItem("enCarrito"));
 const ventas = document.querySelector("#productos-carrito");
-const carritoVacio = document.querySelector(".carrito-vacio");
-const suCompra = document.querySelector(".su-compra");
-const btnpagar = document.querySelector(".btn-secondary");
-const tituloTotal = document.querySelector(".titulo-total");
-const totalPagar = document.querySelector(".suma-total");
-const finalizar = document.querySelector(".btn-primary");
-const titutloFin = document.querySelector(".fin-compra");
+const carritoVacio = document.querySelector("#carrito-vacio");
+const suCompra = document.querySelector("#su-compra");
+const btnpagar = document.querySelector("#btn-secondary");
+const totalPagar = document.querySelector("#suma-total");
+const finalizar = document.querySelector("#btn-primary");
+const titutloFin = document.querySelector("#fin-compra");
 
 
 function listaCompra() {
@@ -17,19 +16,19 @@ function listaCompra() {
             unidad.classList.add("producto-carrito");
             unidad.innerHTML = `
             <img class="img-producto-carrito" src=${pedido.img} alt=${pedido.nombre}>
-              <div class="titulo-producto-carrito">
+              <div class="titulo-producto-carrito text-center">
                   <small>Titulo</small>
                   <p class="producto-info-nombre">${pedido.nombre}</p>
               </div>
-              <div class="cantidad-producto-carrito">
+              <div class="cantidad-producto-carritotext-center">
                   <small>Cantidad</small>
                   <p class="producto-info-cantidad">${pedido.cantidad}</p>
               </div>
-              <div class="precio-producto-carrito">
+              <div class="precio-producto-carrito text-center">
                   <small>Precio</small>
                   <p class="producto-info-precio">$${pedido.precio}</p>
               </div>
-              <div class="subtotal-producto-carrito">
+              <div class="subtotal-producto-carrito text-center">
                   <small>Total</small>
                   <p class="producto-info-total">$${pedido.precio * pedido.cantidad}</p>
               </div>

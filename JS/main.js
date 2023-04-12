@@ -16,7 +16,7 @@ function cargaProductos() {
         div.innerHTML = `<img class="img-producto" src= ${producto.img} alt="">
                          <div class="detalle-producto">
                              <h3 class="titulo-producto">${producto.nombre}</h3>
-                             <p>Precio: ${producto.precio}</p>
+                             <p class="producto-precio">Precio: ${producto.precio}</p>
                              <button class="agregar-carrito" id="${producto.id}">Agregar</button>
                          </div>`
         contenedorProductos.append(div);

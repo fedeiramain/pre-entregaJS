@@ -39,18 +39,18 @@
     </header>
     <main>
 
-      <h2 class="carrito-vacio">Su Carrito esta Vacio</h2>
-      <h2 class="su-compra">Su Compra:</h2> 
-      <h2 class="fin-compra disabled">Muchas Gracias Por Su Compra</h2> 
+      <h2 class="carrito-vacio" id="carrito-vacio">Su Carrito esta Vacio</h2>
+      <h2 class="su-compra" id="su-compra">Su Compra:</h2> 
+      <h2 class="fin-compra disabled" id="fin-compra">Muchas Gracias Por Su Compra</h2> 
       <div class="productos-carrito" id="productos-carrito">
         <!-- Productos en carrito JS-->
       </div>
-      <div class="accion">  
-            <div class="totales">
-              <p class="suma-total">$ 0</p>
+      <div class="accion" id="accion">  
+            <div class="totales" id="totales">
+              <p class="suma-total" id="suma-total">$ 0</p>
             </div>
-              <div class="accion-pagar">
-                    <button type="button" class="btn btn-secondary p-4" data-toggle="modal" data-target="#exampleModal">
+              <div class="accion-pagar" id="accion-pagar">
+                    <button type="button" class="btn btn-secondary p-4" id="btn-secondary" data-toggle="modal" data-target="#exampleModal">
                       Ir a Pagar
                     </button>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -78,7 +78,7 @@
                             </form>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Pagar</button>
+                            <button type="button" class="btn btn-primary" id="btn-primary" data-dismiss="modal">Pagar</button>
                           </div>
                         </div>
                       </div>
