@@ -83,3 +83,62 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 480) {
+    main {
+        height: 70vh;
+        margin: 1rem;
+        border-radius: 1rem;
+    
+        .productos {
+            gap: 10px;
+            padding: 1rem;
+        }
+
+        .productos-carrito {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            "img nombre ..."
+            "img cantidad btn-eliminar"
+            "img total ...";
+        }
+
+        .producto-info-nombre {
+            grid-area: "nombre";
+        }
+
+        .producto-info-cantidad {
+            grid-area: "cantidad";
+        }
+
+        .producto-info-total {
+            grid-area: "total";
+        }
+
+        .img-producto-carrito {
+            grid-area: "img";
+        }
+    }
+}
+
+
+// <img class="img-producto-carrito" src=${pedido.img} alt=${pedido.nombre}>
+//               <div class="titulo-producto-carrito">
+//                   <small>Titulo</small>
+//                   <p class="producto-info">${pedido.nombre}</p>
+//               </div>
+//               <div class="cantidad-producto-carrito">
+//                   <small>Cantidad</small>
+//                   <p class="producto-info">${pedido.cantidad}</p>
+//               </div>
+//               <div class="precio-producto-carrito">
+//                   <small>Precio</small>
+//                   <p class="producto-info">$${pedido.precio}</p>
+//               </div>
+//               <div class="subtotal-producto-carrito">
+//                   <small>Total</small>
+//                   <p class="producto-info">$${pedido.precio * pedido.cantidad}</p>
+//               </div>
+//               <button class="btn-eliminar" id=${pedido.id}><i class="fa-solid fa-

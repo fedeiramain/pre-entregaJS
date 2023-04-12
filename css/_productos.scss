@@ -91,7 +91,11 @@ main {
         text-decoration: underline;
     }
     
-    .producto-info {
+    .producto-info-nombre,
+    .producto-info-cantidad,
+    .producto-info-precio,
+    .producto-info-total
+     {
         color: white;
         font-size: 28px;
     }

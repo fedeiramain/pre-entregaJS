@@ -19,19 +19,19 @@ function listaCompra() {
             <img class="img-producto-carrito" src=${pedido.img} alt=${pedido.nombre}>
               <div class="titulo-producto-carrito">
                   <small>Titulo</small>
-                  <p class="producto-info">${pedido.nombre}</p>
+                  <p class="producto-info-nombre">${pedido.nombre}</p>
               </div>
               <div class="cantidad-producto-carrito">
                   <small>Cantidad</small>
-                  <p class="producto-info">${pedido.cantidad}</p>
+                  <p class="producto-info-cantidad">${pedido.cantidad}</p>
               </div>
               <div class="precio-producto-carrito">
                   <small>Precio</small>
-                  <p class="producto-info">$${pedido.precio}</p>
+                  <p class="producto-info-precio">$${pedido.precio}</p>
               </div>
               <div class="subtotal-producto-carrito">
                   <small>Total</small>
-                  <p class="producto-info">$${pedido.precio * pedido.cantidad}</p>
+                  <p class="producto-info-total">$${pedido.precio * pedido.cantidad}</p>
               </div>
               <button class="btn-eliminar" id=${pedido.id}><i class="fa-solid fa-trash-can"></i></button>
             `

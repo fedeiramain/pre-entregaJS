@@ -135,7 +135,10 @@ main .productos {
   color: blue;
   text-decoration: underline;
 }
-.producto-carrito .producto-info {
+.producto-carrito .producto-info-nombre,
+.producto-carrito .producto-info-cantidad,
+.producto-carrito .producto-info-precio,
+.producto-carrito .producto-info-total {
   color: white;
   font-size: 28px;
 }
@@ -304,5 +307,34 @@ footer .redes .fa-whatsapp {
   }
   .precio-producto-carrito {
     display: none;
+  }
+}
+@media screen and (max-width: 480) {
+  main {
+    height: 70vh;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  main .productos {
+    gap: 10px;
+    padding: 1rem;
+  }
+  main .productos-carrito {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "img nombre ..." "img cantidad btn-eliminar" "img total ...";
+  }
+  main .producto-info-nombre {
+    grid-area: "nombre";
+  }
+  main .producto-info-cantidad {
+    grid-area: "cantidad";
+  }
+  main .producto-info-total {
+    grid-area: "total";
+  }
+  main .img-producto-carrito {
+    grid-area: "img";
   }
 }/*# sourceMappingURL=estilos.css.map */
