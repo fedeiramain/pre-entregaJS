@@ -165,17 +165,23 @@ main .productos {
   flex-direction: column;
   padding: 2rem;
 }
+.accion .totales {
+  display: flex;
+  align-items: start;
+}
 .accion .suma-total {
+  background-color: gray;
   color: black;
   font-size: 40px;
   padding: 1rem;
   border-radius: 10px;
 }
 .accion .btn-secondary {
-  background-color: green !important;
+  background-color: green;
   font-size: 22px;
   padding: 1rem;
   border-radius: 10px;
+  box-shadow: 0 0 0.5rem rgb(0, 0, 0);
 }
 
 .modal-content {
