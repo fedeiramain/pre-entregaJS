@@ -48,8 +48,6 @@ function eliminarproducto() {
      vaciar.forEach(boton => {
         boton.addEventListener("click", quitarDeCarrito)
      })
-
-     quitarDeCarrito;
 }
 
 function quitarDeCarrito(e) {

@@ -48,7 +48,7 @@ function agregarCarrito(e) {
         }
         Toastify({
             text: "Producto Agregado",
-            duration: 3000,
+            duration: 1500,
             close: true,
             gravity: "top",
             position: "right", 
