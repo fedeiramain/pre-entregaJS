@@ -16,7 +16,7 @@ body {
 
 header {
   width: 100%;
-  height: 14vh;
+  height: 12vh;
   color: blue;
 }
 header .head-titulo {
@@ -59,8 +59,8 @@ main {
   height: 74vh;
   overflow-y: scroll;
   background-color: white;
-  padding-bottom: 1rem;
-  margin: 2rem;
+  padding-bottom: 20px;
+  margin: 1rem;
   border-radius: 1rem;
 }
 main .productos {
@@ -82,8 +82,7 @@ main .productos {
   background-color: black;
   border-radius: 1rem;
   margin-top: -1rem;
-  position: relative;
-  padding: 1rem;
+  padding: 2rem;
 }
 .producto .detalle-producto .titulo-producto {
   color: blue;
@@ -224,7 +223,7 @@ footer {
   align-items: center;
 }
 footer .title-footer {
-  margin-top: -20px;
+  margin-top: 10px;
 }
 footer .redes {
   display: flex;
@@ -316,9 +315,6 @@ footer .redes .fa-whatsapp {
   }
 }
 @media screen and (max-width: 480px) {
-  main {
-    height: 70vh;
-  }
   .producto-carrito {
     padding: 5px;
   }
@@ -329,9 +325,6 @@ footer .redes .fa-whatsapp {
   }
   .fin-compra {
     padding: 1rem;
-  }
-  footer {
-    height: 13vh;
   }
   footer .title-footer {
     font-size: 20px;

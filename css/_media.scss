@@ -85,9 +85,7 @@
 };
 
 @media screen and (max-width: 480px) {
-    main {
-        height: 70vh;
-    }
+  
     .producto-carrito {
         padding: 5px;
     }
@@ -103,7 +101,6 @@
     }
 
     footer {
-        height: 13vh;
 
         .title-footer {
             font-size: 20px;

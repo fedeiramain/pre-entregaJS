@@ -2,8 +2,8 @@ main {
     height: 74vh;
     overflow-y: scroll;
     background-color: white;
-    padding-bottom: 1rem;
-    margin: 2rem;
+    padding-bottom: 20px;
+    margin: 1rem;
     border-radius: 1rem;
 
     .productos {
@@ -27,8 +27,7 @@ main {
         background-color: black;
         border-radius: 1rem;
         margin-top: -1rem;
-        position: relative;
-        padding: 1rem;
+        padding: 2rem;
 
         .titulo-producto {
             color: blue;
