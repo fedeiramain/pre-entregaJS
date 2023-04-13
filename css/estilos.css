@@ -317,7 +317,7 @@ footer .redes .fa-whatsapp {
 }
 @media screen and (max-width: 480px) {
   main {
-    height: 75vh;
+    height: 70vh;
   }
   .producto-carrito {
     padding: 5px;
