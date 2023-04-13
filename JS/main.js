@@ -5,24 +5,20 @@ fetch("prod.json")
     .then(response => response.json())
     .then(data => {
         productos = data,
-        cargaProductos(productos);
+        productos.forEach(producto => {
+            let div = document.createElement("div");
+            div.classList.add("producto");
+            div.innerHTML = `<img class="img-producto" src= ${producto.img} alt="">
+                             <div class="detalle-producto">
+                                 <h3 class="titulo-producto">${producto.nombre}</h3>
+                                 <p class="producto-precio">Precio: usd ${producto.precio}</p>
+                                 <button class="agregar-carrito" id="${producto.id}">Agregar</button>
+                             </div>`
+            contenedorProductos.append(div);
+        });
+        cargarCarrito();
     });
 
-function cargaProductos() {
-    
-    productos.forEach(producto => {
-        let div = document.createElement("div");
-        div.classList.add("producto");
-        div.innerHTML = `<img class="img-producto" src= ${producto.img} alt="">
-                         <div class="detalle-producto">
-                             <h3 class="titulo-producto">${producto.nombre}</h3>
-                             <p class="producto-precio">Precio: ${producto.precio}</p>
-                             <button class="agregar-carrito" id="${producto.id}">Agregar</button>
-                         </div>`
-        contenedorProductos.append(div);
-    });
-    cargarCarrito();
-};
 
 function cargarCarrito() {
     botonAgregar = document.querySelectorAll(".agregar-carrito");
@@ -79,3 +75,19 @@ const closeMenu = document.querySelector(".close-menu");
 menuBurger.addEventListener("click", () => navMobile.classList.remove("disabled"));
 
 closeMenu.addEventListener("click", () => navMobile.classList.add("disabled"));
+
+
+
+const cotBlue = document.querySelector("#cot-blue");
+const cotOf = document.querySelector("#cot-oficial");
+
+const cotizacion = async () => {
+    const pagUsd = await fetch("https://api.bluelytics.com.ar/v2/latest");
+    const data = await pagUsd.json();
+    const blue = data.blue;
+    cotBlue.innerText = "Blue: $" + blue.value_avg;
+    const oficial = data.oficial;
+    cotOf.innerText = "Oficial: $" + oficial.value_avg;
+}
+
+cotizacion();

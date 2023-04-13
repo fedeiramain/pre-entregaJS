@@ -20,7 +20,7 @@ function listaCompra() {
                   <small>Titulo</small>
                   <p class="producto-info-nombre">${pedido.nombre}</p>
               </div>
-              <div class="cantidad-producto-carritotext-center">
+              <div class="cantidad-producto-carrito text-center">
                   <small>Cantidad</small>
                   <p class="producto-info-cantidad">${pedido.cantidad}</p>
               </div>
@@ -83,7 +83,7 @@ tituloCarrito();
 function total() {
     const total = pedidos.reduce((acc, producto) => acc +
     (producto.precio * producto.cantidad), 0);
-    totalPagar.innerText = "Total: $" + `${total}`;
+    totalPagar.innerText = "Total: usd " + `${total}`;
 }
 
 total();
@@ -102,4 +102,4 @@ function cierre() {
         titutloFin.classList.remove("disabled");
    
 }
-console.log(pedidos);
+

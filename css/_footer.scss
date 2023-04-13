@@ -5,17 +5,18 @@ footer {
     color: blue;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    .title-footer {
-        margin-top: 10px;
+    .final {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
-
     .redes {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
     
         .fa-brands {
             margin-inline: 5px;
@@ -35,6 +36,18 @@ footer {
             color: green;
             font-size: 30px;
         }
+    }
+
+    .divisas {
+        display: flex;
+        gap: 20px;
+
+        .cot-oficial,
+        .cot-blue {
+            color: white
+        }
+
+        
     }
     
 };

@@ -122,6 +122,12 @@ main .productos {
   padding-left: 2rem;
 }
 
+.fin-compra {
+  color: green;
+  font-size: 40px;
+  padding-left: 1rem;
+}
+
 .producto-carrito {
   max-width: 100%;
   margin: 1rem;
@@ -212,11 +218,6 @@ main .productos {
   background-color: green !important;
   border: 0;
 }
-.modal-content .fin-compra {
-  color: green;
-  font-size: 40px;
-  padding-left: 1rem;
-}
 
 footer {
   width: 100%;
@@ -225,16 +226,18 @@ footer {
   color: blue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-footer .title-footer {
-  margin-top: 10px;
+footer .final {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 footer .redes {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 footer .redes .fa-brands {
   margin-inline: 5px;
@@ -250,6 +253,14 @@ footer .redes .fa-facebook {
 footer .redes .fa-whatsapp {
   color: green;
   font-size: 30px;
+}
+footer .divisas {
+  display: flex;
+  gap: 20px;
+}
+footer .divisas .cot-oficial,
+footer .divisas .cot-blue {
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
